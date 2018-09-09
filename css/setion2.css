@@ -1,0 +1,72 @@
+.imagen-grande{
+    width: 90%;
+    margin: auto;
+    background-color:  #82c3a6;
+    text-align: center;
+}
+
+.imagen-grande img{
+    margin: 40px 0;
+}
+
+.imgen-central{
+    box-shadow: 2px 2px 2px   #02010a ;
+}
+
+
+@media  (max-width:800px){
+    .imagen-grande{
+        width: 100%;
+    }
+    .imagen-grande img{
+        width: 90%;
+    }
+}
+
+
+/* las dos images  */
+
+.imagenes-varias{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    background-color:  #d5c75f;
+    text-align: center;
+    display: flex;
+}
+
+.imagen-1, .imagen-2{
+    margin: 50px 0;
+    position: relative;
+}
+
+.imagen-2 > img:hover{
+     transition: all 1s;
+  transform: translate(20px,-5px);
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+
+}
+.imagen-1 img:hover{
+    transition: all 1s;
+  transform: rotate(10deg);
+
+}
+
+.imagen-1 img, .imagen-2 img{
+    box-shadow: 2px 2px 2px   #02010a ;
+}
+
+@media screen and (max-width:800px){
+    .imagenes-varias{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagen-1 img, .imagen-2 img{
+        width: 90%;
+    }
+
+}

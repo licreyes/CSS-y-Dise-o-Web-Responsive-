@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+body{
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    background-color: #02010a;
+}
+
+.active{
+    -webkit-text-decoration: underline white;
+            text-decoration: underline white;
+}
+
+.active:hover{
+    -webkit-text-emphasis: none;
+            text-emphasis: none;
+}
+
+header{
+    margin: auto;
+    width: 90%;
+    background-color: #5b7989;
+    border-radius: 10px 10px 0 0; 
+
+    display: -webkit-box; 
+
+    display: -ms-flexbox; 
+
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+}
+
+
+.izquierda{
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 40%;
+}
+
+.izquierda h1{
+    color: white;
+    text-shadow: 5px 2px 2px  #02010a;
+}
+
+.izquierda a{
+    text-decoration: none;
+}
+
+.derecha{
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+}
+
+.lista li{
+    list-style: none;
+    float: left;
+    padding: 0px 30px;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+@media screen and (max-width:800px){
+    header{
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column wrap;
+                flex-flow: column wrap;
+    }
+
+    .izquierda, .derecha{
+        width: 100%;
+    }
+
+    .izquierda h1{
+        text-align: center;
+    }
+
+    .derecha{
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+}
+
+/* .imagen-grande{
+    -webkit-animation-direction: 3s;
+            animation-direction: 3s;
+    -webkit-animation-name: slidein;
+            animation-name: slidein;
+}
+
+
+
+@keyframes slidein {
+    75% {
+        font-size: 300%;
+        margin-left: 25%;
+        width: 150%;
+      }
+} */
+
+.animacion{
+    transition: all 2s ease;
+    animation: caer 1s 1 linear;
+
+}
+
+@keyframes caer{
+    0%{
+        transform: translateY(40%);
+    }
+
+    50%, 100%{
+        transform: translateY(0%);
+    }
+
+    70%{
+        transform: translateY(4%);
+    }
+
+    /* 75%{
+        transform: translateY(16%);
+    }
+
+    80%{
+        transform: translateY(18%);
+    } */
+}
